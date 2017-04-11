@@ -1,0 +1,519 @@
+   <!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script>
+        //移动适配-设置各个设备根元素字体大小
+        var desW = 640;
+        var winW = document.documentElement.clientWidth;
+        var desWfontSize = 100;
+        //desW/winW = 100/fs;
+        document.documentElement.style.fontSize = winW / desW * desWfontSize + "px";
+    </script>
+
+    <style type="text/css" id="style1">
+
+        .wrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 2rem;
+            height: 2rem;
+            margin: -1rem 0 0 -1rem;
+            perspective: 20rem;
+        }
+
+        .wrap ul {
+            width: 100%;
+            height: 100%;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            /*animation: move 15s 3s infinite both;*/
+        }
+
+        .wrap ul li {
+            width: 1.98rem;
+            height: 1.98rem;
+            border: 1px solid #ccc;
+            box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.2);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 5px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .wrap ul li a {
+            position: absolute;
+            z-index: 100;
+            width: 1.98rem;
+            height: 1.98rem;
+
+        }
+
+        .wrap ul li:nth-child(1) {
+            background-image: url(img/resume4.png);
+        }
+
+        .wrap ul li:nth-child(2) {
+            background-image: url(img/resume5.png);
+        }
+
+        .wrap ul li:nth-child(3) {
+            background-image: url(img/resume3.png);
+        }
+
+        .wrap ul li:nth-child(4) {
+            background-image: url(img/resume2.png);
+        }
+
+        .wrap ul li:nth-child(5) {
+            background-image: url(img/resume6.png);
+        }
+
+        .wrap ul li:nth-child(6) {
+            background-image: url(img/resume1.png);
+        }
+
+        @keyframes move {
+            0% {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+
+            16.7% {
+                -webkit-transform: rotateY(60deg);
+                transform: rotateY(60deg);
+            }
+            33.33% {
+                -webkit-transform: rotateY(120deg);
+                transform: rotateY(120deg);
+            }
+            50% {
+                -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+            66.67% {
+                -webkit-transform: rotateY(240deg);
+                transform: rotateY(240deg);
+            }
+            83.3% {
+                -webkit-transform: rotateY(300deg);
+                transform: rotateY(300deg);
+            }
+            100% {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+
+        }
+
+        .gradient {
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -2.5rem;
+            margin-top: -2rem;
+            background: radial-gradient(2.5rem 2.5rem at center, rgba(45, 202, 189, 1), rgba(0, 0, 0, 0));
+            background: -webkit-radial-gradient(2.5rem 2.5rem at center, rgba(45, 202, 189, 1), rgba(0, 0, 0, 0));
+            transform: rotateX(90deg);
+            -webkit-transform: rotateX(90deg) translateZ(-1.5rem);
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div class="music">
+        <audio src="" loop preload="none" id="beyond"></audio>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <div class="pic">
+                    <img src="img/正方形.png" alt=""/>
+                    <img src="img/正方形.png" alt=""/>
+                    <img src="img/正方形.png" alt=""/>
+                    <img src="img/正方形.png" alt=""/>
+                    <img src="img/正方形.png" alt=""/>
+                    <img src="img/正方形.png" alt=""/>
+                    <img src="img/inner.png" alt=""/>
+                    <img src="img/inner.png" alt=""/>
+                    <div class="text">
+                        <span>个</span>
+                        <span>人</span>
+                        <span>简</span>
+                        <span>历</span>
+                    </div>
+                </div>
+                <div class="name">
+                    <span class="firstname name">时</span>
+                    <span class="lastname name">盼</span>
+                </div>
+            </div>
+            <div class="swiper-slide slide2">
+                <div class="wrap">
+                    <div class="gradient"></div>
+                    <ul id="wrap">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-slide slide3 detail">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="des">
+                    <ul>
+                        <li>姓名:时盼</li>
+                        <li>所在地:北京</li>
+                        <li>出生年月:1992.07.20</li>
+                        <li>学历:本科</li>
+                        <li>毕业院校:湖南工业大学</li>
+                    </ul>
+                </div>
+                <div class="posL posLt"><img src="img/detail1.png" alt=""/></div>
+                <div class="posL posLb"><img src="img/inner1.png" alt=""/></div>
+                <div>
+
+                </div>
+                <div class="back">
+                    返回
+                </div>
+            </div>
+            <div class="swiper-slide slide4 detail">
+                <div class="skill3d">
+                    <ul class="item">
+                        <li>
+                            <img src="img/html1.jpg" alt="">
+                            <img src="img/html2.jpg" alt="">
+                            <img src="img/html3.png" alt="">
+                            <img src="img/html4.png" alt="">
+                            <img src="img/html5.png" alt="">
+                            <img src="img/html6.png" alt="">
+                            <img src="img/html7.png" alt="">
+                            <img src="img/html8.png" alt="">
+                            <img src="img/html9.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/JS1.png" alt="">
+                            <img src="img/JS2.png" alt="">
+                            <img src="img/JS3.png" alt="">
+                            <img src="img/JS4.png" alt="">
+                            <img src="img/JS5.png" alt="">
+                            <img src="img/JS6.png" alt="">
+                            <img src="img/JS7.png" alt="">
+                            <img src="img/JS8.png" alt="">
+                            <img src="img/JS9.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/A1.png" alt="">
+                            <img src="img/A2.png" alt="">
+                            <img src="img/A3.png" alt="">
+                            <img src="img/A4.png" alt="">
+                            <img src="img/A5.png" alt="">
+                            <img src="img/A6.png" alt="">
+                            <img src="img/A7.png" alt="">
+                            <img src="img/A8.png" alt="">
+                            <img src="img/A9.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/css1.jpg" alt="">
+                            <img src="img/css2.jpg" alt="">
+                            <img src="img/css3.jpg" alt="">
+                            <img src="img/css4.jpg" alt="">
+                            <img src="img/css5.jpg" alt="">
+                            <img src="img/css6.jpg" alt="">
+                            <img src="img/css7.jpg" alt="">
+                            <img src="img/css8.jpg" alt="">
+                            <img src="img/css9.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/node1.jpg" alt="">
+                            <img src="img/node2.jpg" alt="">
+                            <img src="img/node3.jpg" alt="">
+                            <img src="img/node4.jpg" alt="">
+                            <img src="img/node5.jpg" alt="">
+                            <img src="img/node6.jpg" alt="">
+                            <img src="img/node7.jpg" alt="">
+                            <img src="img/node8.jpg" alt="">
+                            <img src="img/node9.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/react1.png" alt="">
+                            <img src="img/react2.png" alt="">
+                            <img src="img/react3.png" alt="">
+                            <img src="img/react4.png" alt="">
+                            <img src="img/react5.png" alt="">
+                            <img src="img/react6.png" alt="">
+                            <img src="img/react7.png" alt="">
+                            <img src="img/react8.png" alt="">
+                            <img src="img/react9.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <dl>
+                    <dt>专业技能</dt>
+                    <dd><em>01</em><a href="#">熟练掌握html+css网页布局</a></dd>
+                    <dd><em>02</em><a href="#">精通javaScript，熟悉jQuery框架</a></dd>
+                    <dd><em>03</em><a href="#">熟练运用ajax技术从后台获取数据</a></dd>
+                    <dd><em>04</em><a href="#">使用html5、css3进行移动端页面开发</a></dd>
+                    <dd><em>05</em><a href="#">熟悉node.js，使用过webpack、gulp</a></dd>
+                    <dd><em>06</em><a href="#">熟悉angular,react等</a></dd>
+                    <dd><em>07</em><a href="#">熟练使用git</a></dd>
+                </dl>
+
+                <div class="posL posLt"><img src="img/detail2.png" alt=""/></div>
+                <div class="posL posLb"><img src="img/inner1.png" alt=""/></div>
+                <div class="back">
+                    返回
+                </div>
+            </div>
+            <div class="swiper-slide slide5 detail">
+                <div class="pro">
+                    <div class="itemBg">
+                        <div class="bgNum bgNum1"></div>
+                        <div class="bgNum bgNum2"></div>
+                        <div class="bgNum bgNum3"></div>
+                        <div class="bgNum bgNum4"></div>
+                        <div class="bgNum bgNum5"></div>
+                        <div class="bgNum bgNum6"></div>
+                        <div class="bgNum bgNum7"></div>
+                    </div>
+
+                    <div class="itemCon">
+                        <div class="con con1">
+                            <h2>新蛋网</h2>
+                            <p class="des">
+                                责任描述：1.根据设计图实现UI的排版的开发；
+                                2.利用html+css实现了页面布局，利用原生JS及jQuery实现电商网页购物的动态交互效果；
+                                3.负责调解各个浏览器的兼容问题等；
+                                4.使用ajax调用后端的API实现购物车页面的异步交互数据功能。
+                            </p>
+                            <p class="syn">
+                                项目简介：此项目是电商，属于是在线购物的平台，产品的展示和详情，在线下订单，加入购物车，在线支付修改个人信息等功能。
+                            </p>
+                        </div>
+                        <div class="con con2">
+                            <h2>爱尚家生活超市</h2>
+                            <p class="des">
+                                责任描述：使用div+css3对页面根据响应式设计图进行响应式排版
+                            </p>
+                            <p class="syn">
+                                项目简介：1.这是一个网上超市的购物网站，可以让您足不出户就可以在网上享受购物的乐趣，而且每天十点前拍下的还可以享受当天同城立即派送新鲜蔬果海鲜的待遇。
+                                2.功能模块：用户登录|用户注册|购物车|搜索|个人账户|用户新手指南|分类首页|拍立送
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="posL posLt"><img src="img/detail3.png" alt=""/></div>
+                <div class="posL posLb"><img src="img/inner1.png" alt=""/></div>
+                <div class="back">
+                    返回
+                </div>
+            </div>
+            <div class="swiper-slide slide6 detail">
+                <div class="work">
+                    <div class="date">2014/10~2016/12</div>
+                    <div class="job">
+                        <ul>
+                            <li>北京软通动力信息技术有限公司</li>
+                            <li>WEB前端开发</li>
+                            <li>互联网/电子商务| 企业性质：私营</li>
+                        </ul>
+                        <div class="duties">
+                            <span>工作描述:</span>
+                            <div class="duty">
+                                <p class="p1">
+                                    1：根据产品设计，完成页面的制作以及交互效果，实现一些动态效果增加观赏性，并在项目上线前后进行相关的优化以提高页面响应速度；维护及优化网站前端性能，提高用户体验。 </p>
+                                <p class="p2">
+                                    2：和后台工程师一起研讨技术实现方案，按需完成页面动画效果、数据交互、动态展现，制定服务接口等。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posL posLt"><img src="img/detail4.png" alt=""/></div>
+                <div class="posL posLb"><img src="img/inner1.png" alt=""/></div>
+                <div class="back">
+                    返回
+                </div>
+            </div>
+            <div class="swiper-slide slide7 detail">
+                <div class="imgs">
+                    <div class="music image"><img src="img/music1.jpg" alt=""></div>
+                    <div class="bike image"><img src="img/car.jpg" alt=""></div>
+                    <div class="ball image"><img src="img/ball2.jpg" alt=""></div>
+                </div>
+                <div class="posL posLt"><img src="img/detail5.png" alt=""/></div>
+                <div class="posL posLb"><img src="img/inner1.png" alt=""/></div>
+                <div class="back">
+                    返回
+                </div>
+            </div>
+            <div class="swiper-slide slide8 detail">
+                <div class="present">
+                    <div class="preBg"></div>
+                    <ul>
+                        <li><span>01</span>对互联网强烈的好奇心和浓厚的兴趣，驱使我不断学习，不断去了解新的前端技能</li>
+                        <li><span>02</span>能根据公司要求完成任务，并有高度执行力</li>
+                        <li><span>03</span>具备良好的沟通能力和团队协作能力，能快速融入团队</li>
+                        <li><span>04</span>希望能够得到您的认可，为公司做出贡献，从而实现自己的价值</li>
+                    </ul>
+                </div>
+                <div class="posL posLt"><img src="img/detail6.png" alt=""/></div>
+                <div class="posL posLb"><img src="img/inner1.png" alt=""/></div>
+                <div class="back">
+                    返回
+                </div>
+            </div>
+        </div>
+        <div class="icon">
+            <img src="img/icon1.png" alt=""/>
+        </div>
+        <div class="back">
+            <span></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script charset="utf-8" type="text/javascript" src="js/swiper.min.js"></script>
+<script charset="utf-8" type="text/javascript">
+    var mySwiper = new Swiper(".swiper-container", {
+        direction: "vertical",
+        loop: true,
+        onSlideChangeEnd: function (swiper) {
+            var slides = swiper.slides;//获得所有的滑块
+            var curIndex = swiper.activeIndex;//下一个滑块或者上一个滑块的索引
+            var trueSlideNum = slides.length - 2; //真实滑块个数
+            var lastSlideNum = trueSlideNum + 1;//最后一个滑块的索引
+            [].forEach.call(slides, function (item, index) {
+                item.id = "";
+                /*把所有滑块的id名去掉*/
+                if (index == curIndex) {
+                    switch (index) {
+                        case 0 :/*第一个滑块是真实的最后一个滑块的副本*/
+                            item.id = "page" + trueSlideNum;
+                            break;
+                        case lastSlideNum :/*最后一个滑块时真实的第一个滑块的副本*/
+                            item.id = "page1";
+                            break;
+                        default  :
+                            item.id = "page" + curIndex;
+                    }
+                }
+            })
+
+        },
+        onInit: function (swiper) {
+//                //swiper初始化完成后给第一个滑块增加动画效果
+//            var slides = swiper.slides;
+//            slides[0].id = "page1";
+        }
+    });
+
+    var oLis = document.querySelectorAll("#wrap li");
+    var oStyle = document.querySelector("#style1");
+    var oUl = document.querySelector('#wrap');//
+    var list = document.querySelectorAll('.back');
+    for (var i = 0; i < oLis.length; i++) {
+        (function (i) {
+            window.setTimeout(function () {
+                oStyle.innerHTML += " #page2 .wrap ul li:nth-child(" + (i + 1) + "){transform:rotateY(" + (oLis.length - 1 - i) * 60 + "deg) translateZ(2rem);transition:0.7s;transition-delay:" + (i * 0.2) + "s}";
+            }, i * 100);
+        })(i);
+    }
+
+    oUl.addEventListener('touchstart', function (ev) {
+//->记录手指的起始坐标
+        var point = ev.changedTouches[0];
+        this['strX'] = point.pageX;
+        this['strY'] = point.pageY;
+        this['changeX'] = 0;
+        this['changeY'] = 0;
+        this['isFlag'] = false;//->记录是否发生滑动
+    }, false);
+    oUl.addEventListener('touchmove', function (ev) {
+//->手指一丁点偏移都没有,就不出触发touchmove,这样的肯定是点击操作,只有发生了偏移,我们才会进一步验证是否发生了滑动
+        var point = ev.changedTouches[0];
+        this['changeX'] = point.pageX - this['strX'];
+        this['changeY'] = point.pageY - this['strY'];
+        if (Math.abs(this['changeX']) > 30 || Math.abs(this['changeY']) > 30) {
+            this['isFlag'] = true;
+        }
+    }, false);
+    window.num = 0;
+    oUl.addEventListener('touchend', function (ev) {
+        //->离开的时候,验证isFlag的值,就知道是滑动还是点击了,而且如果是滑动的话,还可以判断出滑动的方向
+        if (this['isFlag'] === false) {
+            console.log('我是点击操作!');
+            return;
+        }
+        console.log('我是滑动操作!我的滑动方向是:' + swipeDir(this['changeX'], this['changeY']));
+
+        var server = swipeDir(this['changeX'], this['changeY']);
+        console.log(server);
+        if (server == 'left') {
+            num += 60;
+            console.log(num);
+            oUl.style.transform = 'rotateY(-' + num + 'deg)';
+            oUl.style.transition = '1s';
+        }
+        if (server == 'right') {
+            if (num == 0) {
+                num = 360;
+                num -= 60;
+                console.log(num);
+                oUl.style.transform = 'rotateY(-' + num + 'deg)';
+                oUl.style.transition = null;
+            } else {
+                num -= 60;
+                console.log(num);
+                oUl.style.transform = 'rotateY(-' + num + 'deg)';
+                oUl.style.transition = '1s';
+            }
+        }
+
+    }, false);
+
+    //->验证滑动的方向
+    function swipeDir(changeX, changeY) {
+        return Math.abs(changeX) > Math.abs(changeY) ? (changeX > 0 ? 'right' : 'left') : (changeY > 0 ? 'down' : 'up');
+    }
+
+    //点击跳转详情
+    for (var i = 0; i < oLis.length; i++) {
+        oLis[i].index = i;
+        oLis[i].addEventListener('click', function (e) {
+            console.log(e.target);
+            console.log(this.index);
+            mySwiper.slideTo(8 - this.index, 10, true);
+            console.log(mySwiper.activeIndex);
+        })
+    }
+    //点击返回
+    for (var i = 0; i < list.length; i++) {
+        list[i].addEventListener('click', function (e) {
+            mySwiper.slideTo(2, 10, true);
+            console.log(mySwiper.activeIndex);
+        })
+    }
+
+</script>
